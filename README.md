@@ -19,9 +19,9 @@ Based on lazy.nvim plugin and include necessary plugins.
 Copy git to config directory, rename and start nvim
 
 ```bash
-cd $HOME/.config
-https://github.com/sergey-arkhipov/nvim.lazy.git
-mv nvim.lazy nvim
+# Remove aol installation of neovim
+rm -rf  $HOME/.config/nvim  $HOME/.local/share/nvim $HOME/.local/state/nvim
+git clone https://github.com/sergey-arkhipov/nvim.lazy.git $HOME/.config/nvim
 nvim
 
 ```
