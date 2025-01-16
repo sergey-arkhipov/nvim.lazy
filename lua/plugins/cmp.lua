@@ -12,26 +12,24 @@ return {
       "saadparwaiz1/cmp_luasnip", -- Snippet completions
     },
     opts = function(_, opts)
-      local cmp = require('cmp')
+      local cmp = require("cmp")
       opts.completion = {
         -- autocomplete = false, -- Disable automatic popup
       }
       opts.mapping = {
-        ['<C-Space>'] = cmp.mapping.complete(), -- Trigger completion manually with Ctrl+Space
+        ["<C-Space>"] = cmp.mapping.complete(), -- Trigger completion manually with Ctrl+Space
         -- Other mappings...
-        ['<Tab>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-        ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Confirm selection with Enter
+        ["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+        ["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+        ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Confirm selection with Enter
       }
       opts.snippet = {
-        expand = function(args)
-          require('luasnip').lsp_expand(args.body)
-        end,
+        expand = function(args) require("luasnip").lsp_expand(args.body) end,
       }
       opts.sources = {
-        { name = 'nvim_lsp' },-- Lsp
-        { name = 'luasnip' }, -- Snippets
-        { name = 'buffer' }, --Current buffer
+        { name = "nvim_lsp" }, -- Lsp
+        { name = "luasnip" }, -- Snippets
+        { name = "buffer" }, --Current buffer
         option = {
           get_bufnrs = function()
             local bufs = {}
@@ -42,8 +40,8 @@ return {
           end,
         },
       }
-			--Add emoji
-			opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = 'emoji' } }))
-		end,  },
+      --Add emoji
+      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
+    end,
+  },
 }
-
