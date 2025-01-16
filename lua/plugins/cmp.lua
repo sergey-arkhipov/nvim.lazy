@@ -29,9 +29,9 @@ return {
         end,
       }
       opts.sources = {
-        { name = 'nvim_lsp' }, -- Разобрался, работает нормально. Последовательность определяет порядок выдачи
-        { name = 'luasnip' },
-        { name = 'buffer' },
+        { name = 'nvim_lsp' },-- Lsp
+        { name = 'luasnip' }, -- Snippets
+        { name = 'buffer' }, --Current buffer
         option = {
           get_bufnrs = function()
             local bufs = {}
@@ -42,7 +42,8 @@ return {
           end,
         },
       }
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = 'emoji' } }))
-    end,  },
+			--Add emoji
+			opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = 'emoji' } }))
+		end,  },
 }
 
