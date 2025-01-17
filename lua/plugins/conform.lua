@@ -23,6 +23,12 @@ return {
         async = false,
         timeout_ms = 500,
       },
+      formatters = {
+        lua = {
+          command = "stylua",
+          args = { "--config-path", "stylua.toml", "-" },
+        },
+      },
     })
 
     vim.keymap.set(

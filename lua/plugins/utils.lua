@@ -18,6 +18,7 @@ return {
   -- mini-align
   { "echasnovski/mini.align", version = "*", opts = {} },
   { "axieax/urlview.nvim", opts = {} },
+  -- open URL from plugin name
   {
     {
       "elentok/open-link.nvim",
@@ -52,4 +53,9 @@ return {
       },
     },
   },
+  -- surround
+  { "echasnovski/mini.surround", version = "*", opts = {} },
+
+  -- Provides Nerd Font 1 icons (glyphs) for use by Neovim plugins
+  { "nvim-tree/nvim-web-devicons", lazy = true },
 }

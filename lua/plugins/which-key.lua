@@ -19,5 +19,6 @@ return {
     { "<leader>e", "<cmd>Neotree toggle<cr>" }, -- hide this keymap
     { "<C-s>", "<cmd>w<cr>" },
     { "<leader><leader>", "<cmd>Telescope find_files<cr>" },
+    { "<gd>", "<cmd>vim.lsp.buf.definition()<cr>", desc = "Go definition" },
   },
 }

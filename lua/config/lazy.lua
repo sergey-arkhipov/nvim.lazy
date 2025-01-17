@@ -32,6 +32,9 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
+  rocks = {
+    enabled = false,
+  },
 })
 
 -- Config undo, backup and swap directory
@@ -69,3 +72,19 @@ vim.opt.softtabstop = 2
 -- Standart settings
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+-- Clipboard config
+
+vim.g.clipboard = {
+  name = "OSC 52",
+  copy = {
+    ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+  },
+  paste = {
+    ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+  },
+}
+-- Load LSP keymaps
+require("config.lsp_keymaps")
