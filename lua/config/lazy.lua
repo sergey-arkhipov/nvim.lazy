@@ -35,6 +35,9 @@ require("lazy").setup({
   rocks = {
     enabled = false,
   },
+  defaults = {
+    version = "*",
+  },
 })
 
 -- Load keymaps
