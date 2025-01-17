@@ -17,6 +17,7 @@ return {
         yaml = { "prettier" },
         markdown = { "prettier" },
         lua = { "stylua" },
+        eruby = { "htmlbeautifier" },
       },
       format_on_save = {
         lsp_fallback = true,
@@ -27,6 +28,9 @@ return {
         lua = {
           command = "stylua",
           args = { "--config-path", "stylua.toml", "-" },
+        },
+        htmlbeautifier = {
+          prepend_args = { "-b", 1 },
         },
       },
     })

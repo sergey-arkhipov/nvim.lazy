@@ -10,6 +10,9 @@ return {
           "stylua", -- lua formatter
           "markdownlint", --markdown formatter
           "shellcheck", --shell linter
+          "lua_ls",
+          "ruby_lsp",
+          "bashls",
         },
       },
     },

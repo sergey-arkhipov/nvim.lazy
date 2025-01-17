@@ -4,11 +4,16 @@ return {
     "BufReadPre",
     "BufNewFile",
   },
+  keys = {
+
+    { "<leader>ml", function() require("lint").try_lint() end, desc = "Call linters", mode = "n" },
+  },
   config = function()
     local lint = require("lint")
 
     lint.linters_by_ft = {
       markdown = { "markdownlint" },
+      eruby = { "erb_lint" },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
