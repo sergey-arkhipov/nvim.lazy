@@ -1,6 +1,6 @@
 return {
   {
-    -- auto-pairs
+    -- Minimal and fast autopairs
     "echasnovski/mini.pairs",
     opts = {
       modes = { insert = true, command = true, terminal = false },
@@ -15,10 +15,11 @@ return {
       markdown = true,
     },
   },
-  -- mini-align
+  -- Align text interactively
   { "echasnovski/mini.align", version = "*", opts = {} },
+  -- Navigating to the URL in your preferred browser
   { "axieax/urlview.nvim", opts = {} },
-  -- open URL from plugin name
+  -- open URL from "plugin" name
   {
     {
       "elentok/open-link.nvim",
@@ -26,15 +27,7 @@ return {
         local expanders = require("open-link.expanders")
         require("open-link").setup({
           expanders = {
-            -- expands "{user}/{repo}" to the github repo URL
             expanders.github,
-
-            -- expands "format-on-save#15" the issue/pr #15 in the specified github project
-            -- ("format-on-save" is the shortcut/keyword)
-            -- expanders.github_issue_or_pr("format-on-save", "elentok/format-on-save.nvim"),
-
-            -- expands "MYJIRA-1234" and "myotherjira-1234" to the specified Jira URL
-            -- expanders.jira("https://myjira.atlassian.net/browse/", { "myjira", "myotherjira"})
           },
         })
       end,
@@ -53,14 +46,74 @@ return {
       },
     },
   },
-  -- surround
-  { "echasnovski/mini.surround", version = "*", opts = {} },
+  -- Surround selections, stylishly
+  -- { "echasnovski/mini.surround", version = "*", opts = {} },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end,
+  },
 
   -- Provides Nerd Font 1 icons (glyphs) for use by Neovim plugins
   { "nvim-tree/nvim-web-devicons", lazy = true },
+  -- A snazzy 💅 buffer line (with tabpage integration)
   {
     "akinsho/bufferline.nvim",
     requires = "nvim-tree/nvim-web-devicons",
     config = function() require("bufferline").setup({}) end,
+  },
+
+  -- Plugin for automated session management
+  {
+    "folke/persistence.nvim",
+    event = "BufReadPre", -- this will only start session saving when an actual file was opened
+    opts = {
+      -- add any custom options here
+    },
+  },
+
+  -- Improve yank and put functionalities for Neovim
+  {
+    "gbprod/yanky.nvim",
+    opts = {
+      highlight = { timer = 150 },
+      system_clipboard = {
+        sync_with_ring = false,
+      },
+    },
+    keys = {
+      {
+        "<leader>p",
+        function()
+          require("telescope").extensions.yank_history.yank_history({})
+          -- vim.cmd([[YankyRingHistory]])
+        end,
+        mode = { "n", "x" },
+        desc = "Open Yank History",
+      },
+        -- stylua: ignore
+    { "y", "<Plug>(YankyYank)", mode = { "n", "x" }, desc = "Yank Text" },
+      { "p", "<Plug>(YankyPutAfter)", mode = { "n", "x" }, desc = "Put Text After Cursor" },
+      { "P", "<Plug>(YankyPutBefore)", mode = { "n", "x" }, desc = "Put Text Before Cursor" },
+      { "gp", "<Plug>(YankyGPutAfter)", mode = { "n", "x" }, desc = "Put Text After Selection" },
+      { "gP", "<Plug>(YankyGPutBefore)", mode = { "n", "x" }, desc = "Put Text Before Selection" },
+      { "[y", "<Plug>(YankyCycleForward)", desc = "Cycle Forward Through Yank History" },
+      { "]y", "<Plug>(YankyCycleBackward)", desc = "Cycle Backward Through Yank History" },
+      { "]p", "<Plug>(YankyPutIndentAfterLinewise)", desc = "Put Indented After Cursor (Linewise)" },
+      { "[p", "<Plug>(YankyPutIndentBeforeLinewise)", desc = "Put Indented Before Cursor (Linewise)" },
+      { "]P", "<Plug>(YankyPutIndentAfterLinewise)", desc = "Put Indented After Cursor (Linewise)" },
+      { "[P", "<Plug>(YankyPutIndentBeforeLinewise)", desc = "Put Indented Before Cursor (Linewise)" },
+      { ">p", "<Plug>(YankyPutIndentAfterShiftRight)", desc = "Put and Indent Right" },
+      { "<p", "<Plug>(YankyPutIndentAfterShiftLeft)", desc = "Put and Indent Left" },
+      { ">P", "<Plug>(YankyPutIndentBeforeShiftRight)", desc = "Put Before and Indent Right" },
+      { "<P", "<Plug>(YankyPutIndentBeforeShiftLeft)", desc = "Put Before and Indent Left" },
+      { "=p", "<Plug>(YankyPutAfterFilter)", desc = "Put After Applying a Filter" },
+      { "=P", "<Plug>(YankyPutBeforeFilter)", desc = "Put Before Applying a Filter" },
+    },
   },
 }

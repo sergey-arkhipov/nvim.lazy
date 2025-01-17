@@ -26,6 +26,45 @@ nvim
 
 ```
 
+## Settings
+
+- keymaps.lua
+- lazy.lua
+- options.lua
+
 ## Plugins
 
+- clipboard.lua
+- cmp.lua
+- colorschemes.lua
+- conform.lua
+- linters.lua
+- lsp.lua
+- lualine.lua
+- luasnip.lua
+- neo-tree.lua
+- noice.lua
+- replace.lua
+- snacks.lua
+- telescope.lua
+- treesitter.lua
+- utils.lua
+- which-key.lua
+
 ### Lazy
+
+### Utils (plugins.utils)
+
+Plugins for comfortable work
+
+| Name                        | Description                                        |
+| --------------------------- | -------------------------------------------------- |
+| akinsho/bufferline.nvim     | A snazzy 💅 buffer line (with tabpage integration) |
+| axieax/urlview.nvim         | Navigating to the URL in your preferred browser    |
+| echasnovski/mini.align      | Align text interactively                           |
+| echasnovski/mini.pairs      | Minimal and fast autopairs                         |
+| elentok/open-link.nvim      | Neovim plugin to open links in a browser           |
+| folke/persistence.nvim      | Plugin for automated session management            |
+| gbprod/yanky.nvim           | Improve yank and put functionalities for Neovim    |
+| kylechui/nvim-surround      | Surround selections, stylishly                     |
+| nvim-tree/nvim-web-devicons | Nerd Font 1 icons (glyphs)                         |
