@@ -26,10 +26,7 @@ map("n", "<leader>ql", function() require("persistence").load({ last = true }) e
 map("n", "<leader>qd", function() require("persistence").stop() end, { desc = "Quit session" })
 
 -- floating terminal
-map("n", "<leader>fT", function() Snacks.terminal(nil, { cwd = vim.fn.getcwd() }) end, { desc = "Terminal (cwd)" })
--- map("n", "<leader>ft", function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "Terminal (Root Dir)" })
--- map("n", "<c-/>", function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "Terminal (Root Dir)" })
--- map("n", "<c-_>", function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "which_key_ignore" })
+map("n", "<leader>ft", function() Snacks.terminal(nil, { cwd = vim.fn.getcwd() }) end, { desc = "Terminal (cwd)" })
 -- snacks.nvim terminal settings
 vim.keymap.set({ "n", "t" }, "<C-/>", function()
   -- Get current file's directory or fallback to current working directory
