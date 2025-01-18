@@ -59,3 +59,6 @@ end
 vim.api.nvim_create_autocmd("BufEnter", {
   callback = add_current_dir_to_localpath,
 })
+
+-- Set colorscheme
+vim.cmd([[colorscheme gruvbox]])
