@@ -14,6 +14,7 @@ return {
           "lua_ls",
           has_ruby and "ruby_lsp" or nil, -- Conditionally include ruby_lsp
           "bashls",
+          "yamlls",
         },
       },
     },
@@ -47,6 +48,7 @@ return {
       })
       if has_ruby then require("lspconfig").ruby_lsp.setup({}) end
       require("lspconfig").bashls.setup({})
+      require("lspconfig").yamlls.setup({})
     end,
   },
 }
