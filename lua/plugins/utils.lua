@@ -147,7 +147,7 @@ return {
     },
   },
 
-  -- Add additional colorschemes
+  --| Additional colorschemes | Add additional colorschemes |
   {
     { "ellisonleao/gruvbox.nvim" },
     { "folke/tokyonight.nvim" },

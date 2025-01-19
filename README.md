@@ -36,7 +36,6 @@ nvim
 
 - clipboard.lua
 - cmp.lua
-- colorschemes.lua
 - conform.lua
 - gitlab.lua
 - linters.lua
@@ -45,6 +44,7 @@ nvim
 - luasnip.lua
 - neo-tree.lua
 - noice.lua
+- rails.lua
 - replace.lua
 - snacks.lua
 - telescope.lua
@@ -61,15 +61,16 @@ Plugins for comfortable work
 
 | Name                                      | Description                                                             |
 | ----------------------------------------- | ----------------------------------------------------------------------- |
-| akinsho/bufferline.nvim                   | A snazzy 💅 buffer line (with tabpage integration)                      |
-| axieax/urlview.nvim                       | Navigating to the URL in your preferred browser                         |
-| echasnovski/mini.align                    | Align text interactively                                                |
 | echasnovski/mini.pairs                    | Minimal and fast autopairs                                              |
+| echasnovski/mini.align                    | Align text interactively                                                |
+| axieax/urlview.nvim                       | Navigating to the URL in your preferred browser                         |
 | elentok/open-link.nvim                    | Open URL from "plugin" name                                             |
-| folke/flash.nvim                          | Navigate your code with search labels, enhanced motions, and Treesitter |
+| kylechui/nvim-surround                    | Surround ala tpope                                                      |
+| nvim-tree/nvim-web-devicons               | Provides Nerd Font 1 icons (glyphs) for use by Neovim plugins           |
+| akinsho/bufferline.nvim                   | A snazzy 💅 buffer line (with tabpage integration)                      |
 | folke/persistence.nvim                    | Plugin for automated session management                                 |
 | gbprod/yanky.nvim                         | Improve yank and put functionalities for Neovim                         |
+| folke/flash.nvim                          | Navigate your code with search labels, enhanced motions, and Treesitter |
 | iamcco/markdown-preview.nvim              | Markdown preview plugin for Neovim                                      |
-| kylechui/nvim-surround                    | Surround ala tpope                                                      |
 | MeanderingProgrammer/render-markdown.nvim | Improve viewing Markdown files in Neovim                                |
-| nvim-tree/nvim-web-devicons               | Provides Nerd Font 1 icons (glyphs) for use by Neovim plugins           |
+| Additional colorschemes                   | Add additional colorschemes                                             |
