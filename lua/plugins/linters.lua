@@ -4,10 +4,6 @@ return {
     "BufReadPre",
     "BufNewFile",
   },
-  keys = {
-
-    { "<leader>ml", function() require("lint").try_lint() end, desc = "Call linters", mode = "n" },
-  },
   config = function()
     local lint = require("lint")
 
