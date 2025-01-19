@@ -36,7 +36,7 @@ require("lazy").setup({
     enabled = false,
   },
   defaults = {
-    version = "*",
+    -- version = "*",
   },
 })
 
