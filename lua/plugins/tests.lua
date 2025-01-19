@@ -1,31 +1,34 @@
 return {
-  { "vim-test/vim-test" },
+  {
+    "vim-test/vim-test",
+    event = "VeryLazy",
+    config = function()
+      -- Your Vim-Test configuration goes here
+      vim.g["test#strategy"] = "neovim" -- Set Neotest as the strategy
+
+      -- Remap keys for run vim-test
+      vim.api.nvim_buf_set_keymap(0, "n", "<leader>tt", "<cmd>TestFile<CR>", { noremap = true, silent = true })
+      vim.api.nvim_buf_set_keymap(0, "n", "<leader>tr", "<cmd>TestNearest<CR>", { noremap = true, silent = true })
+    end,
+  },
   {
     "nvim-neotest/neotest",
+    event = "VeryLazy",
     dependencies = {
       "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
-      -- "nvim-neotest/neotest-vim-test",
+
       --- tests
       "olimorris/neotest-rspec",
-      "vim-test/vim-test",
     },
     config = function()
-      --@diagnostic disable-next-line missing-fields
       require("neotest").setup({
+        -- @diagnostic disable-next-line missing-fields
         -- log_level = "debug",
         adapters = {
           require("neotest-rspec"),
-          -- require("neotest-vim-test"),
-          -- ({
-          --   allow_file_types = { "cucumber", "ruby", "feature" },
-          --   -- Specify the working directory
-          --   cwd = function()
-          --     return vim.fn.expand("%") -- or specify a specific path
-          --   end,
-          -- }),
         },
       })
     end,
