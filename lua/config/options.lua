@@ -51,6 +51,7 @@ global.clipboard = {
     ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
   },
 }
+-- Disable some provider from checkhealth
 global.loaded_node_provider = 0
 global.loaded_perl_provider = 0
 global.loaded_python3_provider = 0

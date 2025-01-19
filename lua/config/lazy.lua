@@ -61,4 +61,4 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 -- Set colorscheme
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme tokyonight-night]])

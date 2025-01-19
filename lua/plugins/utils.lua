@@ -146,4 +146,10 @@ return {
       latex = { enabled = false },
     },
   },
+
+  -- Add additional colorschemes
+  {
+    { "ellisonleao/gruvbox.nvim" },
+    { "folke/tokyonight.nvim" },
+  },
 }
