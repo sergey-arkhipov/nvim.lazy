@@ -34,7 +34,6 @@ nvim
 
 ## Plugins
 
-- clipboard.lua
 - cmp.lua
 - conform.lua
 - gitlab.lua
@@ -53,7 +52,14 @@ nvim
 - utils.lua
 - which-key.lua
 
-### LSP
+### Lsp servers
+
+| Name     | Install/Depended         | Description                                                       |
+| -------- | ------------------------ | ----------------------------------------------------------------- |
+| lua_ls   | auto                     | language features for Lua                                         |
+| ruby_lsp | language ruby            | LSP is an implementation of the language server protocol for Ruby |
+| bashls   | auto                     | Bash language server                                              |
+| yamlls   | npm yaml-language-server | Supports JSON Schema 7 and below                                  |
 
 Lsp servers will be installed automatically.
 If you need `ruby_lsp` to be installed, first run `nvim` in the directory with the Ruby project.
