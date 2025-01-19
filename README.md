@@ -57,6 +57,11 @@ nvim
 
 Lsp servers will be installed automatically.
 If you need `ruby_lsp` to be installed, first run `nvim` in the directory with the Ruby project.
+`yaml-language-server` depended of node package. Can be installed manually.
+
+```bash
+npm install -g yaml-language-server
+```
 
 ### Gitlab.nvim
 
