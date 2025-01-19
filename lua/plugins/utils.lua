@@ -103,7 +103,7 @@ return {
     },
   },
 
-  --| folke/flash.nvim |  Navigate your code with search labels, enhanced character motions, and Treesitter integration |
+  --| folke/flash.nvim | Navigate your code with search labels, enhanced  motions, and Treesitter |
   {
     "folke/flash.nvim",
     event = "VeryLazy",
@@ -116,5 +116,30 @@ return {
     { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
     { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
   },
+  },
+  --| iamcco/markdown-preview.nvim | Markdown preview plugin for Neovim |
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = function()
+      require("lazy").load({ plugins = { "markdown-preview.nvim" } })
+      vim.fn["mkdp#util#install"]()
+    end,
+    keys = {
+      {
+        "<leader>cp",
+        ft = "markdown",
+        "<cmd>MarkdownPreviewToggle<cr>",
+        desc = "Markdown Preview",
+      },
+    },
+    config = function() vim.cmd([[do FileType]]) end,
+  },
+
+  --| MeanderingProgrammer/render-markdown.nvim | Improve viewing Markdown files in Neovim |
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" }, -- if you use the mini.nvim suite
+    opts = {},
   },
 }

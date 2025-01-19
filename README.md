@@ -1,7 +1,7 @@
 # Description
 
 This is nvim config for RoR and usual tasks.
-Based on lazy.nvim plugin and include necessary plugins.
+Based on lazy.nvim plugin manager and include necessary plugins.
 
 ## Setup
 
@@ -16,7 +16,7 @@ Based on lazy.nvim plugin and include necessary plugins.
 
 ### Installation
 
-Copy git to config directory, rename and start nvim
+Copy git to config directory and start nvim
 
 ```bash
 # Remove previous installation of neovim
@@ -59,15 +59,17 @@ nvim
 
 Plugins for comfortable work
 
-| Name                        | Description                                                                                   |
-| --------------------------- | --------------------------------------------------------------------------------------------- |
-| akinsho/bufferline.nvim     | A snazzy 💅 buffer line (with tabpage integration)                                            |
-| axieax/urlview.nvim         | Navigating to the URL in your preferred browser                                               |
-| echasnovski/mini.align      | Align text interactively                                                                      |
-| echasnovski/mini.pairs      | Minimal and fast autopairs                                                                    |
-| elentok/open-link.nvim      | Open URL from "plugin" name                                                                   |
-| folke/flash.nvim            | Navigate your code with search labels, enhanced character motions, and Treesitter integration |
-| folke/persistence.nvim      | Plugin for automated session management                                                       |
-| gbprod/yanky.nvim           | Improve yank and put functionalities for Neovim                                               |
-| kylechui/nvim-surround      | Surround ala tpope                                                                            |
-| nvim-tree/nvim-web-devicons | Provides Nerd Font 1 icons (glyphs) for use by Neovim plugins                                 |
+| Name                                      | Description                                                             |
+| ----------------------------------------- | ----------------------------------------------------------------------- |
+| akinsho/bufferline.nvim                   | A snazzy 💅 buffer line (with tabpage integration)                      |
+| axieax/urlview.nvim                       | Navigating to the URL in your preferred browser                         |
+| echasnovski/mini.align                    | Align text interactively                                                |
+| echasnovski/mini.pairs                    | Minimal and fast autopairs                                              |
+| elentok/open-link.nvim                    | Open URL from "plugin" name                                             |
+| folke/flash.nvim                          | Navigate your code with search labels, enhanced motions, and Treesitter |
+| folke/persistence.nvim                    | Plugin for automated session management                                 |
+| gbprod/yanky.nvim                         | Improve yank and put functionalities for Neovim                         |
+| iamcco/markdown-preview.nvim              | Markdown preview plugin for Neovim                                      |
+| kylechui/nvim-surround                    | Surround ala tpope                                                      |
+| MeanderingProgrammer/render-markdown.nvim | Improve viewing Markdown files in Neovim                                |
+| nvim-tree/nvim-web-devicons               | Provides Nerd Font 1 icons (glyphs) for use by Neovim plugins           |

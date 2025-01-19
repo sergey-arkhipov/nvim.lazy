@@ -15,16 +15,14 @@ return {
     },
 
     mode = { "n", "v" }, -- NORMAL and VISUAL mode
-    -- { "<leader>q", "<cmd>qal<cr>", desc = "Quit" }, -- no need to specify mode since it's inherited
-    -- { "<leader>w", "<cmd>w<cr>", desc = "Write" },
     { "<leader>e", "<cmd>Neotree toggle<cr>" }, -- hide this keymap
     { "<C-s>", "<cmd>w<cr>" },
     { "<leader><leader>", "<cmd>Telescope find_files<cr>" },
-    { "<gd>", "<cmd>vim.lsp.buf.definition()<cr>", desc = "Go definition" },
+    -- { "<gd>", "<cmd>vim.lsp.buf.definition()<cr>", desc = "Go definition" },
     -- windows
-    { "<leader>w", "<c-w>", desc = "Windows" },
-    { "<leader>w-", "<C-W>s", desc = "Split Window Below" },
-    { "<leader>w|", "<C-W>v", desc = "Split Window Right" },
-    { "<leader>wd", "<C-W>c", desc = "Delete Window" },
+    -- { "<leader>w", "<c-w>", desc = "Windows" },
+    -- { "<leader>w-", "<C-W>s", desc = "Split Window Below" },
+    -- { "<leader>w|", "<C-W>v", desc = "Split Window Right" },
+    -- { "<leader>wd", "<C-W>c", desc = "Delete Window" },
   },
 }
