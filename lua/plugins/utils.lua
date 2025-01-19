@@ -120,6 +120,7 @@ return {
   --| iamcco/markdown-preview.nvim | Markdown preview plugin for Neovim |
   {
     "iamcco/markdown-preview.nvim",
+    event = "VeryLazy",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     build = function()
       require("lazy").load({ plugins = { "markdown-preview.nvim" } })
@@ -140,6 +141,7 @@ return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter" }, -- if you use the mini.nvim suite
+    event = "VeryLazy",
     opts = {},
   },
 }

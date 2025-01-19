@@ -51,5 +51,5 @@ global.clipboard = {
     ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
   },
 }
-
--- vim.g["test#strategy"] = "neovim" -- Use Neotest as the strategy
+-- vim.ui.select = Snacks.picker.select
+-- vim.ui.input = Snacks.input
