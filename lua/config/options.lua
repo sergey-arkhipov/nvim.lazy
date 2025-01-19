@@ -51,3 +51,5 @@ global.clipboard = {
     ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
   },
 }
+
+-- vim.g["test#strategy"] = "neovim" -- Use Neotest as the strategy
