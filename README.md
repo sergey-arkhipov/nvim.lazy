@@ -53,7 +53,18 @@ nvim
 - utils.lua
 - which-key.lua
 
-### Lazy
+### LSP
+
+Lsp servers will be installed automatically.
+If you need `ruby_lsp` to be installed, first run `nvim` in the directory with the Ruby project.
+
+### Gitlab.nvim
+
+requirements
+
+`Go >= v1.19`
+
+If requirements are not met, the plugin will not be installed.
 
 ### Utils (plugins.utils)
 

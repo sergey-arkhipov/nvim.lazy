@@ -39,7 +39,7 @@ o.number = true
 o.relativenumber = true
 
 -- Clipboard config
-
+o.clipboard = "unnamedplus"
 global.clipboard = {
   name = "OSC 52",
   copy = {
