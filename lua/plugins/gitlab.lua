@@ -1,5 +1,8 @@
 return {
   "harrisoncramer/gitlab.nvim",
+  cond = function()
+    return vim.fn.executable("go") == 1 -- Check if 'go' is executable
+  end,
   dependencies = {
     { "MunifTanjim/nui.nvim" },
     { "nvim-lua/plenary.nvim" },

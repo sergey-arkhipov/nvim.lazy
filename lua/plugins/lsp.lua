@@ -1,3 +1,4 @@
+local has_ruby = os.execute("ruby -v > /dev/null 2>&1") == 0
 return {
   -- automate install LSP, formatters and linters
   {
@@ -11,7 +12,7 @@ return {
           "markdownlint", --markdown formatter
           "shellcheck", --shell linter
           "lua_ls",
-          "ruby_lsp",
+          has_ruby and "ruby_lsp" or nil, -- Conditionally include ruby_lsp
           "bashls",
         },
       },
@@ -44,7 +45,7 @@ return {
           },
         },
       })
-      require("lspconfig").ruby_lsp.setup({})
+      if has_ruby then require("lspconfig").ruby_lsp.setup({}) end
       require("lspconfig").bashls.setup({})
     end,
   },
