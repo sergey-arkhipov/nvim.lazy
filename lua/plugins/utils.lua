@@ -1,25 +1,20 @@
 return {
+  --| echasnovski/mini.pairs | Minimal and fast autopairs |
   {
-    -- Minimal and fast autopairs
     "echasnovski/mini.pairs",
     opts = {
       modes = { insert = true, command = true, terminal = false },
-      -- skip autopair when next character is one of these
       skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
-      -- skip autopair when the cursor is inside these treesitter nodes
       skip_ts = { "string" },
-      -- skip autopair when next character is closing pair
-      -- and there are more closing pairs than opening pairs
       skip_unbalanced = true,
-      -- better deal with markdown code blocks
       markdown = true,
     },
   },
-  -- Align text interactively
+  --| echasnovski/mini.align | Align text interactively |
   { "echasnovski/mini.align", version = "*", opts = {} },
-  -- Navigating to the URL in your preferred browser
+  --| axieax/urlview.nvim | Navigating to the URL in your preferred browser|
   { "axieax/urlview.nvim", opts = {} },
-  -- open URL from "plugin" name
+  --| elentok/open-link.nvim | Open URL from "plugin" name |
   {
     {
       "elentok/open-link.nvim",
@@ -46,36 +41,32 @@ return {
       },
     },
   },
+
+  --| kylechui/nvim-surround | Surround ala tpope |
   {
     "kylechui/nvim-surround",
-    version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
-    config = function()
-      require("nvim-surround").setup({
-        -- Configuration here, or leave empty to use defaults
-      })
-    end,
+    config = function() require("nvim-surround").setup({}) end,
   },
 
-  -- Provides Nerd Font 1 icons (glyphs) for use by Neovim plugins
+  --| nvim-tree/nvim-web-devicons | Provides Nerd Font 1 icons (glyphs) for use by Neovim plugins |
   { "nvim-tree/nvim-web-devicons", lazy = true },
-  -- A snazzy 💅 buffer line (with tabpage integration)
+
+  --| akinsho/bufferline.nvim | A snazzy 💅 buffer line (with tabpage integration) |
   {
     "akinsho/bufferline.nvim",
     requires = "nvim-tree/nvim-web-devicons",
     config = function() require("bufferline").setup({}) end,
   },
 
-  -- Plugin for automated session management
+  --| folke/persistence.nvim |  Plugin for automated session management |
   {
     "folke/persistence.nvim",
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
-    opts = {
-      -- add any custom options here
-    },
+    opts = {},
   },
 
-  -- Improve yank and put functionalities for Neovim
+  --| gbprod/yanky.nvim |  Improve yank and put functionalities for Neovim |
   {
     "gbprod/yanky.nvim",
     opts = {
@@ -87,10 +78,7 @@ return {
     keys = {
       {
         "<leader>p",
-        function()
-          require("telescope").extensions.yank_history.yank_history({})
-          -- vim.cmd([[YankyRingHistory]])
-        end,
+        function() require("telescope").extensions.yank_history.yank_history({}) end,
         mode = { "n", "x" },
         desc = "Open Yank History",
       },
@@ -115,11 +103,10 @@ return {
     },
   },
 
-  -- navigate your code with search labels, enhanced character motions, and Treesitter integration.
+  --| folke/flash.nvim |  Navigate your code with search labels, enhanced character motions, and Treesitter integration |
   {
     "folke/flash.nvim",
     event = "VeryLazy",
-    --@type Flash.Config
     opts = {},
   -- stylua: ignore
   keys = {
