@@ -93,6 +93,6 @@ Plugins for comfortable work
 | folke/persistence.nvim                    | Plugin for automated session management                                 |
 | gbprod/yanky.nvim                         | Improve yank and put functionalities for Neovim                         |
 | folke/flash.nvim                          | Navigate your code with search labels, enhanced motions, and Treesitter |
-| iamcco/markdown-preview.nvim              | Markdown preview plugin for Neovim                                      |
+| iamcco/markdown-preview.nvim              | Old plugin required manual installation - remove                        |
 | MeanderingProgrammer/render-markdown.nvim | Improve viewing Markdown files in Neovim                                |
 | Additional colorschemes                   | Add additional colorschemes                                             |
