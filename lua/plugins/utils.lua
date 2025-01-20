@@ -117,26 +117,6 @@ return {
     { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
   },
   },
-  --| iamcco/markdown-preview.nvim | Markdown preview plugin for Neovim |
-  {
-    "iamcco/markdown-preview.nvim",
-    event = "VeryLazy",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = function()
-      require("lazy").load({ plugins = { "markdown-preview.nvim" } })
-      vim.fn["mkdp#util#install"]()
-    end,
-    keys = {
-      {
-        "<leader>cp",
-        ft = "markdown",
-        "<cmd>MarkdownPreviewToggle<cr>",
-        desc = "Markdown Preview",
-      },
-    },
-    config = function() vim.cmd([[do FileType]]) end,
-  },
-
   --| MeanderingProgrammer/render-markdown.nvim | Improve viewing Markdown files in Neovim |
   {
     "MeanderingProgrammer/render-markdown.nvim",

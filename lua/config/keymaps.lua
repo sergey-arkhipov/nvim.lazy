@@ -75,6 +75,9 @@ map("n", "<leader>tO", function() require("neotest").output_panel.toggle() end, 
 map("n", "<leader>tS", function() require("neotest").run.stop() end, { desc = "Stop" })
 map("n", "<leader>tw", function() require("neotest").watch.toggle(vim.fn.expand("%")) end, { desc = "Toggle Watch" })
 
+-- Markdown preview toggle
+map("n", "<leader>cp", "<cmd>RenderMarkdown toggle <cr>", { desc = "Toggle markdown preview" })
+
 -- Add name for keys groups
 map("n", "<leader>s", "", { desc = "Search" })
 map("n", "<leader>f", "", { desc = "Files" })
