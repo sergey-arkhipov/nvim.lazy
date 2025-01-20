@@ -55,3 +55,10 @@ global.clipboard = {
 global.loaded_node_provider = 0
 global.loaded_perl_provider = 0
 global.loaded_python3_provider = 0
+
+-- Set fold
+-- o.foldmethod = "syntax"
+o.langmap =
+  "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
+o.spelllang = { "en_us", "ru" } -- Словари рус eng
+o.spell = true
