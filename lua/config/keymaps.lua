@@ -77,6 +77,13 @@ map("n", "<leader>tw", function() require("neotest").watch.toggle(vim.fn.expand(
 
 -- Markdown preview toggle
 map("n", "<leader>cp", "<cmd>RenderMarkdown toggle <cr>", { desc = "Toggle markdown preview" })
+--
+-- windows
+map("n", "<leader>w", "", { desc = "Windows" })
+map("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
+map("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
+map("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
+map("n", "<leader>wq", "<C-W>q", { desc = "Close Window", remap = true })
 
 -- Add name for keys groups
 map("n", "<leader>s", "", { desc = "Search" })
