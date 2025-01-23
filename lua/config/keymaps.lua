@@ -90,4 +90,12 @@ map("n", "<leader>s", "", { desc = "Search" })
 map("n", "<leader>f", "", { desc = "Files" })
 map("n", "<leader>u", "", { desc = "UI" })
 map("n", "<leader>g", "", { desc = "Git" })
-map("n", "gl", "", { desc = "GitLab" })
+map("n", "gl", "", { desc = "GitLab", remap = true })
+
+-- Add set UI background transparent
+map(
+  "n",
+  "<leader>ut",
+  function() require("config.transparency").setBackgroundTransparent() end,
+  { desc = "Enable Transparency" }
+)
