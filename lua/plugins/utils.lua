@@ -131,6 +131,15 @@ return {
   {
     { "ellisonleao/gruvbox.nvim" },
     { "folke/tokyonight.nvim" },
+    { "Tsuzat/NeoSolarized.nvim" },
+    { "rebelot/kanagawa.nvim" },
+    { "projekt0n/github-nvim-theme" },
+    { "sainnhe/gruvbox-material" },
+    { "catppuccin/nvim" },
+    { "sainnhe/everforest" },
+    { "Mofiqul/dracula.nvim" },
+    { "Mofiqul/vscode.nvim" },
+    { "sainnhe/sonokai" },
   },
 
   --| kevinhwang91/nvim-ufo | Neovim's fold look modern and keep high performance |
