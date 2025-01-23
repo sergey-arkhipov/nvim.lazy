@@ -62,3 +62,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 
 -- Set colorscheme
 vim.cmd([[colorscheme tokyonight-night]])
+
+-- Set transparent background
+require("config.transparency")
