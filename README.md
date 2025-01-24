@@ -1,6 +1,7 @@
 # Description
 
 This is nvim config for RoR and usual tasks.
+
 Based on lazy.nvim plugin manager and include necessary plugins.
 
 ## Setup

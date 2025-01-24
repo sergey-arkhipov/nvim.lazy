@@ -4,12 +4,6 @@ capabilities.textDocument.foldingRange = {
   dynamicRegistration = false,
   lineFoldingOnly = true,
 }
-vim.filetype.add({
-  pattern = {
-    [".*/*.html.erb"] = "erb",
-    [".*/*.yml"] = "yaml",
-  },
-})
 return {
   -- automate install LSP, formatters and linters
   {
@@ -20,13 +14,14 @@ return {
         ensure_installed = {
           "prettier", -- prettier formatter
           "stylua", -- lua formatter
-          "markdownlint", --markdown formatter
-          "shellcheck", --shell linter
-          "lua_ls",
+          "markdownlint", -- markdown formatter
+          "shellcheck", -- shell linter
+          "lua_ls", -- lua LSP
           has_ruby and "ruby_lsp" or nil, -- Conditionally include ruby_lsp
-          "bashls",
-          "yamlls",
-          "htmlbeautifier",
+          "bashls", -- bash KSP
+          "yamlls", -- yaml LSP
+          "htmlbeautifier", -- erb beautifier
+          "erb-lint", -- erb linter
         },
       },
     },
@@ -60,6 +55,7 @@ return {
       })
       if has_ruby then require("lspconfig").ruby_lsp.setup({}) end
       require("lspconfig").bashls.setup({})
+      require("lspconfig").marksman.setup({})
       require("lspconfig").yamlls.setup({
         capabilities = capabilities,
         settings = {

@@ -9,6 +9,7 @@ return {
 
     lint.linters_by_ft = {
       markdown = { "markdownlint" },
+      ["eruby.yml"] = { "prettier" },
       eruby = { "erb_lint" },
     }
 

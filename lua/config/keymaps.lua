@@ -99,3 +99,5 @@ map(
   function() require("config.transparency").setBackgroundTransparent() end,
   { desc = "Enable Transparency" }
 )
+
+map("n", "<leader>cf", "<cmd>FormatERB<cr>", { desc = "FormatERB" })

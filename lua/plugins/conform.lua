@@ -8,14 +8,12 @@ return {
       formatters_by_ft = {
         javascript = { "prettier" },
         typescript = { "prettier" },
-        svelte = { "prettier" },
         css = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
         lua = { "stylua" },
-        erb = { "htmlbeautifier" },
       },
       format_on_save = {
         lsp_fallback = true,
@@ -26,9 +24,6 @@ return {
         lua = {
           command = "stylua",
           args = { "--config-path", "stylua.toml", "-" },
-        },
-        htmlbeautifier = {
-          prepend_args = { "-b", 1 },
         },
       },
     })
