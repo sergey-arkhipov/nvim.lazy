@@ -4,6 +4,12 @@ capabilities.textDocument.foldingRange = {
   dynamicRegistration = false,
   lineFoldingOnly = true,
 }
+vim.filetype.add({
+  pattern = {
+    [".*/*.html.erb"] = "erb",
+    [".*/*.yml"] = "yaml",
+  },
+})
 return {
   -- automate install LSP, formatters and linters
   {
@@ -20,6 +26,7 @@ return {
           has_ruby and "ruby_lsp" or nil, -- Conditionally include ruby_lsp
           "bashls",
           "yamlls",
+          "htmlbeautifier",
         },
       },
     },
@@ -62,6 +69,7 @@ return {
               ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
               ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = "/*.gitlab-ci.yml",
             },
+            format = { enable = true },
           },
         },
       })
