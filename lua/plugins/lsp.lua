@@ -1,7 +1,7 @@
 local has_ruby = os.execute("ruby -v > /dev/null 2>&1") == 0
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.foldingRange = {
-  dynamicRegistration = false,
+  dynamicRegistration = true,
   lineFoldingOnly = true,
 }
 return {
@@ -15,6 +15,7 @@ return {
           "prettier", -- prettier formatter
           "stylua", -- lua formatter
           "markdownlint", -- markdown formatter
+          "marksman", -- markdown lsp
           "shellcheck", -- shell linter
           "lua_ls", -- lua LSP
           has_ruby and "ruby_lsp" or nil, -- Conditionally include ruby_lsp
@@ -22,6 +23,7 @@ return {
           "yamlls", -- yaml LSP
           "htmlbeautifier", -- erb beautifier
           "erb-lint", -- erb linter
+          "yamllint", -- yaml linter
         },
       },
     },
@@ -69,6 +71,28 @@ return {
           },
         },
       })
+      -- require("lspconfig").cucumber_language_server.setup({
+      --   capabilities = capabilities,
+      -- default_config = {
+      --   cmd = "cucumber-language-server",
+      --   args = { "--stdio" },
+      --   filetypes = { "cucumber", "feature" },
+      --   timeout = 5000,
+      --   root_path = function(fname) return vim.fs.dirname(vim.fs.find(".git", { path = fname, upward = true })[1]) end,
+      --   settings = {
+      --     cucumber = {
+      --       features = { "**/*.feature" },
+      --       glue = { "step_definitions/**/*.rb" },
+      --     },
+      --   },
+      -- },
+      --   settings = {
+      --     cucumber = {
+      --       features = { "features/**/*.feature" },
+      --       glue = { "features/step_definitions/**/*.rb" },
+      --     },
+      --   },
+      -- })
     end,
   },
 }

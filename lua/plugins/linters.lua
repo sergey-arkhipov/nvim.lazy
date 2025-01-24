@@ -9,9 +9,13 @@ return {
 
     lint.linters_by_ft = {
       markdown = { "markdownlint" },
-      ["eruby.yml"] = { "prettier" },
+      yaml = { "yamllint" },
       eruby = { "erb_lint" },
     }
+    lint.linters.cspell = require("lint.util").wrap(lint.linters.cspell, function(diagnostic)
+      diagnostic.severity = vim.diagnostic.severity.HINT
+      return diagnostic
+    end)
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 

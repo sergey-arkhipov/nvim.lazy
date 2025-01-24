@@ -14,3 +14,9 @@ vim.api.nvim_create_autocmd("BufEnter", {
 
 -- Set user command formattiong erb files
 vim.api.nvim_create_user_command("FormatERB", function() require("config.formatters").format_erb() end, {})
+
+-- Set filetype yaml for eruby-yaml
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.yml",
+  command = "setlocal filetype=yaml",
+})
