@@ -99,5 +99,17 @@ map(
   function() require("config.transparency").setBackgroundTransparent() end,
   { desc = "Enable Transparency" }
 )
+-- Run format for html.erb
+map("n", "<leader>ce", "<cmd>FormatERB<cr>", { desc = "FormatERB" })
 
-map("n", "<leader>cf", "<cmd>FormatERB<cr>", { desc = "FormatERB" })
+-- Copy current buffer name and full path to clipboard
+map("n", "<leader>cF", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  print(path)
+end, { desc = "Yank filepath" })
+map("n", "<leader>cf", function()
+  local path = vim.fn.expand("%")
+  vim.fn.setreg("+", path)
+  print(path)
+end, { desc = "Yank filename" })

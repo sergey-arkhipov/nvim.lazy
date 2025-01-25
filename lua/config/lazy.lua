@@ -48,7 +48,7 @@ require("config.options")
 require("config.autocmds")
 
 -- Set colorscheme
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[colorscheme github_dark_dimmed]])
 
 -- Set transparent background
 require("config.transparency")
