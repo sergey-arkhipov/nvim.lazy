@@ -16,28 +16,26 @@ return {
   { "axieax/urlview.nvim", opts = {} },
   --| elentok/open-link.nvim | Open URL from "plugin" name |
   {
-    {
-      "elentok/open-link.nvim",
-      init = function()
-        local expanders = require("open-link.expanders")
-        require("open-link").setup({
-          expanders = {
-            expanders.github,
-          },
-        })
-      end,
-      cmd = { "OpenLink", "PasteImage" },
-      keys = {
-        {
-          "ge",
-          "<cmd>OpenLink<cr>",
-          desc = "Open the link under the cursor",
+    "elentok/open-link.nvim",
+    init = function()
+      local expanders = require("open-link.expanders")
+      require("open-link").setup({
+        expanders = {
+          expanders.github,
         },
-        {
-          "<Leader>ip",
-          "<cmd>PasteImage<cr>",
-          desc = "Paste image from clipboard",
-        },
+      })
+    end,
+    cmd = { "OpenLink", "PasteImage" },
+    keys = {
+      {
+        "ge",
+        "<cmd>OpenLink<cr>",
+        desc = "Open the link under the cursor",
+      },
+      {
+        "<Leader>ip",
+        "<cmd>PasteImage<cr>",
+        desc = "Paste image from clipboard",
       },
     },
   },
@@ -128,20 +126,46 @@ return {
   },
 
   --| Additional colorschemes | Add additional colorschemes |
+  -- add colorscheme
+  { "ellisonleao/gruvbox.nvim", lazy = true },
+  { "rebelot/kanagawa.nvim", lazy = true },
+  { "sainnhe/sonokai", lazy = true },
+  { "dracula/vim", lazy = true },
+  { "projekt0n/github-nvim-theme" },
+  { "catppuccin/nvim" },
+  { "Mofiqul/vscode.nvim" },
+  { "navarasu/onedark.nvim" },
+  { "shaunsingh/nord.nvim" },
+  { "Mofiqul/dracula.nvim" },
   {
-    { "ellisonleao/gruvbox.nvim" },
-    { "folke/tokyonight.nvim" },
-    { "Tsuzat/NeoSolarized.nvim" },
-    { "rebelot/kanagawa.nvim" },
-    { "projekt0n/github-nvim-theme" },
-    { "sainnhe/gruvbox-material" },
-    { "catppuccin/nvim" },
-    { "sainnhe/everforest" },
-    { "Mofiqul/dracula.nvim" },
-    { "Mofiqul/vscode.nvim" },
-    { "sainnhe/sonokai" },
+    "EdenEast/nightfox.nvim",
+    config = function()
+      require("nightfox").setup({
+        options = {
+          -- Compiled file's destination location
+          transparent = true,
+        },
+      })
+    end,
   },
-
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  },
+  -- Use PandocPaste for precerve formatting
+  {
+    "petRUShka/pandoc_paste.vim",
+    config = function()
+      -- Example: disable default mapping
+      -- vim.g.pandoc_paste_no_mapping = 1
+    end,
+  },
   --| kevinhwang91/nvim-ufo | Neovim's fold look modern and keep high performance |
   {
 

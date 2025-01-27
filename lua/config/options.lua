@@ -62,3 +62,5 @@ o.langmap =
   "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 o.spelllang = { "en_us", "ru" } -- Словари рус eng
 o.spell = true
+-- Set cursorline
+o.cursorline = true
