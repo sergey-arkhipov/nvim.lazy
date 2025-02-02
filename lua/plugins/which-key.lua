@@ -17,7 +17,7 @@ return {
     mode = { "n", "v" }, -- NORMAL and VISUAL mode
     { "<leader>e", "<cmd>Neotree toggle<cr>" }, -- hide this keymap
     { "<C-s>", "<cmd>w<cr>" },
-    { "<leader><leader>", "<cmd>Telescope git_files<cr>" },
+    -- { "<leader><leader>", "<cmd>Telescope git_files<cr>" },
     -- { "<gd>", "<cmd>vim.lsp.buf.definition()<cr>", desc = "Go definition" },
     -- windows
     -- { "<leader>w", "<c-w>", desc = "Windows" },

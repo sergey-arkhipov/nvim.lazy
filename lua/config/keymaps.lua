@@ -91,6 +91,7 @@ map("n", "<leader>f", "", { desc = "Files" })
 map("n", "<leader>u", "", { desc = "UI" })
 map("n", "<leader>g", "", { desc = "Git" })
 map("n", "gl", "", { desc = "GitLab", remap = true })
+map("n", ";", "", { desc = "Surround", remap = true })
 
 -- Add set UI background transparent
 map(

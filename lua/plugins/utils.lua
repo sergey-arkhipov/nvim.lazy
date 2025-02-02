@@ -10,6 +10,28 @@ return {
       markdown = true,
     },
   },
+  --| echasnovski/mini.files | Navigate and manipulate file system |
+  {
+    "echasnovski/mini.files",
+    version = "*",
+    keys = {
+      { "<leader>fm", ":lua MiniFiles.open()<cr>", desc = "MiniFiles" },
+    },
+    opts = {
+      mappings = {
+        go_in = "<Right>",
+        go_out = "<Left>",
+      },
+      windows = {
+        width_nofocus = 20,
+        width_focus = 50,
+        width_preview = 100,
+      },
+      options = {
+        use_as_default_explorer = true,
+      },
+    },
+  },
   --| echasnovski/mini.align | Align text interactively |
   { "echasnovski/mini.align", version = "*", opts = {} },
   --| axieax/urlview.nvim | Navigating to the URL in your preferred browser|
@@ -40,13 +62,22 @@ return {
     },
   },
 
-  --| kylechui/nvim-surround | Surround ala tpope |
+  --| echasnovski/mini.surround | Surround ala tpope |
+  -- Add new mappinngs to surround
   {
-    "kylechui/nvim-surround",
-    event = "VeryLazy",
-    config = function() require("nvim-surround").setup({}) end,
+    "echasnovski/mini.surround",
+    opts = {
+      mappings = {
+        add = ";;",
+        delete = ";d",
+        find = ";f",
+        find_left = ";F",
+        highlight = ";h",
+        replace = ";r",
+        update_n_lines = ";n",
+      },
+    },
   },
-
   --| nvim-tree/nvim-web-devicons | Provides Nerd Font 1 icons (glyphs) for use by Neovim plugins |
   { "nvim-tree/nvim-web-devicons", lazy = true },
 
