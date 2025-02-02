@@ -23,9 +23,10 @@ return {
         go_out = "<Left>",
       },
       windows = {
-        width_nofocus = 20,
-        width_focus = 50,
-        width_preview = 100,
+        width_nofocus = 15,
+        width_focus = 20,
+        width_preview = 80,
+        preview = true,
       },
       options = {
         use_as_default_explorer = true,
