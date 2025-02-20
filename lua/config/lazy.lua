@@ -51,4 +51,4 @@ require("config.autocmds")
 vim.cmd([[colorscheme nordfox]])
 
 -- Set transparent background
-require("config.transparency")
+-- require("config.transparency")

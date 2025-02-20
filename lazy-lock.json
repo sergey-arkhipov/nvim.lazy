@@ -48,6 +48,7 @@
   "snacks.nvim": { "branch": "main", "commit": "ac76e8ea369eaa800dc15815b3630c0d22f0ab8c" },
   "sonokai": { "branch": "master", "commit": "4ea2553ca140e8b8378a7dfb8eefbb103594c96d" },
   "tokyonight.nvim": { "branch": "main", "commit": "dca4adba7dc5f09302a00b0e76078d54d82d2658" },
+  "transparent.nvim": { "branch": "main", "commit": "8a2749a2fa74f97fe6557f61b89ac7fd873f3c21" },
   "trouble.nvim": { "branch": "main", "commit": "6f380b8826fb819c752c8fd7daaee9ef96d4c689" },
   "urlview.nvim": { "branch": "main", "commit": "c07733179e27c225ac3c58c3951701ee10b2dbde" },
   "vim": { "branch": "master", "commit": "65f4225e0526516a67d56c8ac09925a209138e53" },

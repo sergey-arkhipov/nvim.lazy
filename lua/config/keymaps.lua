@@ -94,12 +94,7 @@ map("n", "gl", "", { desc = "GitLab", remap = true })
 map("n", ";", "", { desc = "Surround", remap = true })
 
 -- Add set UI background transparent
-map(
-  "n",
-  "<leader>ut",
-  function() require("config.transparency").setBackgroundTransparent() end,
-  { desc = "Enable Transparency" }
-)
+map("n", "<leader>ue", "<cmd>TransparentToggle<cr>", { desc = "Toggle Transparency" })
 -- Run format for html.erb
 map("n", "<leader>ce", "<cmd>FormatERB<cr>", { desc = "FormatERB" })
 
